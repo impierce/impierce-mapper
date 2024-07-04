@@ -16,7 +16,7 @@ use rust_i18n::t;
 pub fn render_description_input_p1(area: Rect, buf: &mut Buffer, state: &mut AppState) {
     // Main title at the top of p1
     Block::new()
-        .title("  OB-ELM Mapper  ")
+        .title("  ELM-OB Mapper  ")
         .title_alignment(Alignment::Center)
         .borders(Borders::TOP)
         .render(area, buf);
