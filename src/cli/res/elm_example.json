@@ -1,8 +1,5 @@
 {
-    "@context": [
-      "https://www.w3.org/2018/credentials/v1",
-      "http://data.europa.eu/snb/model/context/edc-ap"
-    ],
+    "@context": "https://www.w3.org/2018/credentials/v1",
     "id": "urn:credential:bfe82763-0eff-4cca-bc51-7988054d69ab",
     "type": [
       "VerifiableCredential",
@@ -32,13 +29,13 @@
         }
       ],
       "givenName": {
-        "en": ["David"]
+        "en": "David"
       },
       "familyName": {
-        "en": ["Smith"]
+        "en": "Smith"
       },
       "fullName": {
-        "en": ["David Smith"]
+        "en": "David Smith"
       },
       "hasClaim": [
         {
@@ -194,9 +191,8 @@
         }
       ],
       "description": {
-        "en": [
+        "en":
           "EBSI example based on https://github.com/Knowledge-Innovation-Centre/ESBI-JSON-schemas/blob/main/examples%20of%20credentials/Spanish%20example/diploma-rntuo-credential.json"
-        ]
       },
       "individualDisplay": [
         {
@@ -264,7 +260,7 @@
         "notation": "language"
       },
       "title": {
-        "en": ["Diploma rntuo credential"]
+        "en": "Diploma rntuo credential"
       }
     }
 }
