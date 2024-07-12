@@ -5,7 +5,6 @@ use crate::{
         transformations::{DataLocation, OneToOne, Transformation},
     },
     state::{AppState, Transformations},
-    trace_dbg,
 };
 
 pub fn selector(state: &mut AppState) {
