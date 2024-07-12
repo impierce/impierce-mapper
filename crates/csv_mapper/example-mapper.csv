@@ -1,8 +1,0 @@
-sourcePath,targetPath,transformation
-$.phone,$.phoneNumber,,
-$.firstName,$.firstName,,
-$.lastName,$.lastName,,
-$.credentialCount,$.credentialCount,,
-$.employee.type,$.member.type,,
-$.address.street,$.fullAddress.street,,
-$.type,$.type,,

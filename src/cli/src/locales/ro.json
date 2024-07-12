@@ -1,3 +1,0 @@
-{
-    "intro": "\nAcest instrument este creat pentru a converti permisiunile între formatele OpenBadges și ELM.\n\nPrimește un fișier json ca intrare și generează un fișier json nou, mapat. Câmpurile neasociate pot fi asociate manual. Asocierea manuală poate fi salvată într-un fișier de asociere personalizat pentru utilizare ulterioară.\n\nPentru căi absolute începeți cu '/', pentru căi relative directorul curent este: %{pwd}"
-}

@@ -1,3 +1,0 @@
-{
-    "intro": "\nSee tööriist on mõeldud volituste teisendamiseks OpenBadges ja ELM-vormingute vahel.\n\nSee võtab sisendina json-faili ja genereerib uue, kaardistatud json-faili. Kaardistamata välju saab kaardistada käsitsi. Käsitsi kaardistamised saab salvestada kohandatud kaardistamisfaili tulevaseks kasutamiseks.\n\nAbsoluutsete teede jaoks alustage '/', suhteliste teede korral on praegune kaust: %{pwd}"
-}

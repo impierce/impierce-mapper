@@ -1,3 +1,0 @@
-{
-    "intro": "\nTento nástroj je určený na konverziu oprávnení medzi formátmi OpenBadges a ELM.\n\nPrijíma json súbor ako vstup a generuje nový, mapovaný json súbor. Nemapované pol polia je možné mapovať manuálne. Manuálne mapovanie je možné uložiť do vlastného súboru mapovania pre budúce použitie.\n\nPre absolútne cesty začnite s '/', pre relatívne cesty je aktuálny adresár: %{pwd}"
-}

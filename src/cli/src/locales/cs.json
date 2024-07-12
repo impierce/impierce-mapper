@@ -1,3 +1,0 @@
-{
-    "intro": "\nTento nástroj je určen k převodu průkazů mezi formáty OpenBadges a ELM.\n\nPřijímá json soubor jako vstup a vytváří nový, mapovaný json soubor. Nemapovaná pole lze mapovat ručně. Ruční mapování lze uložit do vlastního souboru s mapováním pro budoucí použití.\n\nPro absolutní cesty začněte s '/', pro relativní cesty je aktuální adresář: %{pwd}"
-}

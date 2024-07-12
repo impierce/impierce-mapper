@@ -363,10 +363,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4b82cf0babdbd58558212896d1a4272303a57bdb245c2bf1147185fb45640e70"
 
 [[package]]
-name = "cli"
-version = "0.1.0"
-
-[[package]]
 name = "color-eyre"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -553,20 +549,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "csv_mapper"
-version = "0.1.0"
-dependencies = [
- "digital-credential-data-models 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
- "dotenvy",
- "env_logger",
- "jsonpath-rust",
- "log",
- "serde",
- "serde_json",
- "tokio",
-]
-
-[[package]]
 name = "deranged"
 version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -589,20 +571,11 @@ dependencies = [
 [[package]]
 name = "digital-credential-data-models"
 version = "0.1.0"
+source = "git+https://github.com/impierce/digital-credential-data-models.git?rev=9f16c27#9f16c27b4fa2d413269fc10b38c4ce66a10a0d49"
 dependencies = [
- "types-common 0.1.0",
- "types-elm-v3 0.1.0",
- "types-ob-v3 0.1.0",
-]
-
-[[package]]
-name = "digital-credential-data-models"
-version = "0.1.0"
-source = "git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths#5fcd65121bceffeda2c91f244afb327d863d86b8"
-dependencies = [
- "types-common 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
- "types-elm-v3 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
- "types-ob-v3 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
+ "types-common",
+ "types-elm-v3",
+ "types-ob-v3",
 ]
 
 [[package]]
@@ -666,29 +639,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b45de904aa0b010bce2ab45264d0631681847fa7b6f2eaa7dab7619943bc4f59"
 dependencies = [
  "cfg-if",
-]
-
-[[package]]
-name = "env_filter"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a009aa4810eb158359dda09d0c87378e4bbb89b5a801f016885a4707ba24f7ea"
-dependencies = [
- "log",
- "regex",
-]
-
-[[package]]
-name = "env_logger"
-version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38b35839ba51819680ba087cd351788c9a3c476841207e0b8cee0b04722343b9"
-dependencies = [
- "anstream",
- "anstyle",
- "env_filter",
- "humantime",
- "log",
 ]
 
 [[package]]
@@ -1040,12 +990,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df3b46402a9d5adb4c86a0cf463f42e19994e3ee891101b1841f30a545cb49a9"
 
 [[package]]
-name = "humantime"
-version = "2.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
-
-[[package]]
 name = "hyper"
 version = "0.14.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1195,17 +1139,31 @@ dependencies = [
 name = "impierce-mapper"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "clap 4.5.7",
- "cli",
+ "color-eyre",
+ "config",
  "crossterm",
- "csv_mapper",
+ "digital-credential-data-models",
+ "directories",
  "dotenvy",
+ "jsonpath-rust",
  "jsonschema",
+ "lazy_static",
+ "num-derive",
+ "num-traits",
  "ratatui",
+ "regex",
  "reqwest 0.12.5",
+ "rust-i18n",
  "serde",
  "serde_json",
+ "serde_path_to_error",
+ "strum",
  "tokio",
+ "tracing",
+ "tracing-error",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -1239,32 +1197,6 @@ name = "ipnet"
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8f518f335dce6725a761382244631d86cf0ccb2863413590b31338feb467f9c3"
-
-[[package]]
-name = "ipt_tester"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "color-eyre",
- "config",
- "crossterm",
- "digital-credential-data-models 0.1.0",
- "directories",
- "jsonpath-rust",
- "lazy_static",
- "num-derive",
- "num-traits",
- "ratatui",
- "regex",
- "rust-i18n",
- "serde",
- "serde_json",
- "serde_path_to_error",
- "strum",
- "tracing",
- "tracing-error",
- "tracing-subscriber",
-]
 
 [[package]]
 name = "is_terminal_polyfill"
@@ -1432,17 +1364,7 @@ dependencies = [
 [[package]]
 name = "macro-derive"
 version = "0.1.0"
-dependencies = [
- "convert_case",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "macro-derive"
-version = "0.1.0"
-source = "git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths#5fcd65121bceffeda2c91f244afb327d863d86b8"
+source = "git+https://github.com/impierce/digital-credential-data-models.git?rev=9f16c27#9f16c27b4fa2d413269fc10b38c4ce66a10a0d49"
 dependencies = [
  "convert_case",
  "proc-macro2",
@@ -2943,26 +2865,12 @@ checksum = "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825"
 [[package]]
 name = "types-common"
 version = "0.1.0"
+source = "git+https://github.com/impierce/digital-credential-data-models.git?rev=9f16c27#9f16c27b4fa2d413269fc10b38c4ce66a10a0d49"
 dependencies = [
  "chrono",
  "email_address",
  "iso8601-duration",
- "macro-derive 0.1.0",
- "regex",
- "serde",
- "serde_json",
- "serde_stacker",
-]
-
-[[package]]
-name = "types-common"
-version = "0.1.0"
-source = "git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths#5fcd65121bceffeda2c91f244afb327d863d86b8"
-dependencies = [
- "chrono",
- "email_address",
- "iso8601-duration",
- "macro-derive 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
+ "macro-derive",
  "regex",
  "serde",
  "serde_json",
@@ -2972,22 +2880,7 @@ dependencies = [
 [[package]]
 name = "types-elm-v3"
 version = "0.1.0"
-dependencies = [
- "chrono",
- "fluent-uri",
- "regex",
- "serde",
- "serde_json",
- "strum",
- "strum_macros",
- "time",
- "types-common 0.1.0",
-]
-
-[[package]]
-name = "types-elm-v3"
-version = "0.1.0"
-source = "git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths#5fcd65121bceffeda2c91f244afb327d863d86b8"
+source = "git+https://github.com/impierce/digital-credential-data-models.git?rev=9f16c27#9f16c27b4fa2d413269fc10b38c4ce66a10a0d49"
 dependencies = [
  "chrono",
  "fluent-uri",
@@ -2995,30 +2888,19 @@ dependencies = [
  "serde",
  "serde_json",
  "time",
- "types-common 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
+ "types-common",
 ]
 
 [[package]]
 name = "types-ob-v3"
 version = "0.1.0"
+source = "git+https://github.com/impierce/digital-credential-data-models.git?rev=9f16c27#9f16c27b4fa2d413269fc10b38c4ce66a10a0d49"
 dependencies = [
  "chrono",
  "regex",
  "serde",
  "serde_json",
- "types-common 0.1.0",
-]
-
-[[package]]
-name = "types-ob-v3"
-version = "0.1.0"
-source = "git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths#5fcd65121bceffeda2c91f244afb327d863d86b8"
-dependencies = [
- "chrono",
- "regex",
- "serde",
- "serde_json",
- "types-common 0.1.0 (git+https://github.com/impierce/digital-credential-data-models.git?branch=feat/json-paths)",
+ "types-common",
 ]
 
 [[package]]

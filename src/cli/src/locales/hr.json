@@ -1,3 +1,0 @@
-{
-    "intro": "\nOvaj alat je napravljen za pretvaranje ovlasti između OpenBadges i ELM formata.\n\nPrihvaća json datoteku kao ulaz i generira novu, mapiranu json datoteku. Nepostavljena polja mogu se mapirati ručno. Ručna mapiranja mogu se spremiti u prilagođenu datoteku mapiranja za buduću upotrebu.\n\nZa apsolutne putanje započnite s '/', za relativne putanje trenutni direktorij je: %{pwd}"
-}

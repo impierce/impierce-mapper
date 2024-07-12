@@ -39,7 +39,6 @@ fn main() -> Result<()> {
         output_path: "res/output_credential.json".to_string(),
         custom_mapping_path: "res/custom_mapping.json".to_string(),
 
-        // tab: Tabs::UnusedDataP3,
         optional_fields: vec![
             ("".to_string(), "".to_string()),
             ("credentialSubject/phoneNumber".to_string(), "".to_string()),

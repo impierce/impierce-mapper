@@ -1,3 +1,0 @@
-{
-    "intro": "\nŠis rīks ir paredzēts atļauju pārveidošanai starp OpenBadges un ELM formātiem.\n\nTas ņem json failu kā ievadi un ģenerē jaunu, kartētu json failu. Neatkarinātie lauki var tikt kartēti manuāli. Manuālās kartēšanas var saglabāt pielāgotās kartēšanas failā nākotnes izmantošanai.\n\nAbsolūtajiem ceļiem sāciet ar '/', bet attiecīgajiem ceļiem ir: %{pwd}"
-}

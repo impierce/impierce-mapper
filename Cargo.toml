@@ -1,30 +1,31 @@
-[workspace]
-members = [".", "crates/*", "src/*"]
-resolver = "2"
-
 [package]
 name = "impierce-mapper"
 version = "0.1.0"
 edition = "2021"
-
-[workspace.dependencies]
-serde = { version = "1", features = ["serde_derive", "derive"] }
-tokio = { version = "1", features = ["full"] }
-serde_json = "1"
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
 dotenvy = { version = "0.15", features = ["clap"] }
 jsonschema = "0.17"
 reqwest = { version = "0.12", features = ["json"] }
-tokio = { workspace = true }
-serde = { workspace = true }
-serde_json = { workspace = true }
-cli = { path = "crates/cli" }
-csv_mapper = { path = "crates/csv_mapper" }
-ratatui = "0.26.3"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["serde_derive", "derive"] }
+serde_json = "1"
+anyhow = "1.0"
 crossterm = "0.27.0"
-
-[[bin]]
-name = "mapper"
-path = "src/mapper.rs"
+ratatui = { version = "0.26", features = ["all-widgets"]}
+num-traits = "0.2.19"
+num-derive = "0.4.2"
+tracing-error = "0.2.0"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+directories = "5.0.1"
+lazy_static = "1.4.0"
+color-eyre = "0.6.3"
+regex = "1.10"
+rust-i18n = "3.0"
+config = "0.14"
+serde_path_to_error = "0.1"
+jsonpath-rust = "0.5"
+strum = "0.26.2"
+digital-credential-data-models = { git = "https://github.com/impierce/digital-credential-data-models.git", rev = "9f16c27" }

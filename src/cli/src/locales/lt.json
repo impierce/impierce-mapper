@@ -1,3 +1,0 @@
-{
-    "intro": "\nŠis įrankis skirtas leidimų konvertavimui tarp OpenBadges ir ELM formatų.\n\nJis priima json failą kaip įvestį ir sugeneruoja naują, susietą json failą. Nesuvesti laukai gali būti susieti rankiniu būdu. Rankiniai susiejimai gali būti išsaugoti asmeniniame susiejimo faile būsimam naudojimui.\n\nAbsoliutiniams keliams pradėkite su '/', o santykiniai keliai yra: %{pwd}"  
-}

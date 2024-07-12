@@ -1,3 +1,0 @@
-{  
-    "intro": "\nThis tool is made for converting credentials between the OpenBadges and the ELM format.\n\nIt takes a json file as input and outputs the new, mapped json file. Unmapped fields can be mapped manually. Manual mappings can be saved to a custom mapping file for future use.\n\nFor absolute paths start with '/', for relative paths the current directory is: %{pwd}"
-}

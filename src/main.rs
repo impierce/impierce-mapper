@@ -1,52 +1,69 @@
-use clap::{Parser, ValueEnum};
-use std::path::PathBuf;
+mod backend;
+mod events;
+mod render;
+mod state;
+mod translations;
 
-pub mod validate;
+use crate::events::*;
+use crate::render::*;
 
-#[derive(Parser)] // requires `derive` feature
-#[command(name = "imp-mapper")]
-#[command(bin_name = "imp-mapper")]
-enum CliAction {
-    Validate(ValidateArgs),
-    Convert(ConvertArgs),
-}
+use backend::logging::initialize_logging;
+use crossterm::event::DisableMouseCapture;
+use crossterm::event::EnableMouseCapture;
+use crossterm::execute;
+use crossterm::terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen};
+use ratatui::prelude::{CrosstermBackend, Terminal};
+use state::AppState;
+use std::io::{stdout, Result};
 
-#[derive(Debug, ValueEnum, Clone)]
-pub enum Format {
-    W3VC,
-    OBV3,
-    ELM,
-}
+// Load I18n macro, for allow you use `t!` macro in anywhere.
+#[macro_use]
+extern crate rust_i18n;
+i18n!("src/locales", fallback = "en");
 
-/// Validate a JSON-ld file.
-#[derive(Parser, Debug)]
-#[command(version, about, long_about = None)]
-pub struct ValidateArgs {
-    pub file: PathBuf,
-    #[clap(short = 'f', long)]
-    pub format: Format,
-}
+fn main() -> Result<()> {
+    initialize_logging().expect("Unexpected error while initializing logging");
+    trace_dbg!("Starting the application");
 
-/// Convert a JSON-ld file.
-#[derive(Parser, Debug)]
-#[command(version, about, long_about = None)]
-pub struct ConvertArgs {
-    pub todo: String,
-}
+    // Initialize the alternate terminal screen, its input and the backend for it.
+    execute!(stdout(), EnterAlternateScreen, EnableMouseCapture)?;
+    enable_raw_mode()?;
+    let mut terminal = Terminal::new(CrosstermBackend::new(stdout()))?;
+    terminal.clear()?;
+    let mut state = AppState {
+        // Default example values, remove if no longer needed
+        input_path: "res/elm_example.json".to_string(),
+        mapping_path: "res/mapping_empty.json".to_string(),
+        output_path: "res/output_credential.json".to_string(),
+        custom_mapping_path: "res/custom_mapping.json".to_string(),
 
-#[tokio::main]
-async fn main() {
-    let result = CliAction::parse();
+        optional_fields: vec![
+            ("".to_string(), "".to_string()),
+            ("credentialSubject/e-Mail".to_string(), "".to_string()),
+            ("credentialSubject/phoneNumber".to_string(), "".to_string()),
+            ("credentialSubject/gender".to_string(), "".to_string()),
+        ], // todo: load in optional fields properly
 
-    let result = match result {
-        CliAction::Convert(_) => {
-            println!("todo");
-            Ok(())
-        }
-        CliAction::Validate(args) => validate::Validate::exec(args).await,
+        selected_input_field: 1, // todo: what if none? Also after going back to tab 1 and changing file paths?
+        selected_missing_field: 1, // todo: what if none?
+        selected_optional_field: 1, // todo: what if none?
+        select_mapping_option: true,
+        ..Default::default()
     };
 
-    if let Err(err) = result {
-        eprintln!("{}", err.to_string());
+    loop {
+        terminal.draw(|frame| {
+            let area = frame.size();
+            state.area = area;
+            render_page(frame, area, &mut state);
+        })?;
+
+        if events_handler(&mut state)? {
+            break;
+        };
     }
+
+    execute!(stdout(), LeaveAlternateScreen, DisableMouseCapture)?;
+    disable_raw_mode()?;
+    Ok(())
 }

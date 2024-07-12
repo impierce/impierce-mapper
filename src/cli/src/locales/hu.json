@@ -1,3 +1,0 @@
-{
-    "intro": "\nEz az eszköz az OpenBadges és az ELM formátumok közötti hitelesítő adatok átalakítására készült.\n\nEgy json fájlt vesz bemenetként, és egy új, leképezett json fájlt hoz létre. A leképezetlen mezőket kézzel leképezheti. A kézi leképezéseket egyéni leképezési fájlba mentheti a későbbi használatra.\n\nAbszolút elérési utak esetén kezdje '/', relatív utak esetén a jelenlegi könyvtár: %{pwd}"
-}

@@ -1,3 +1,0 @@
-{
-    "intro": "\nEsta herramienta está hecha para convertir credenciales entre los formatos OpenBadges y ELM.\n\nToma un archivo json como entrada y genera un nuevo archivo json mapeado. Los campos no mapeados pueden ser mapeados manualmente. Los mapeos manuales se pueden guardar en un archivo de mapeo personalizado para uso futuro.\n\nPara rutas absolutas comience con '/', para rutas relativas el directorio actual es: %{pwd}"
-}

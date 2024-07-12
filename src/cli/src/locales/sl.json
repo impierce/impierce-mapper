@@ -1,3 +1,0 @@
-{
-    "intro": "\nTo orodje je namenjeno pretvorbi dovoljenj med formati OpenBadges in ELM.\n\nSprejme json datoteko kot vnos in ustvari nov, preslikan json datoteko. Nepovezana polja je mogoče preslikati ročno. Ročna preslikava se lahko shrani v prilagojeni datoteki preslikave za prihodnjo uporabo.\n\nZa absolutne poti začnite z '/', za relativne poti je trenutna mapa: %{pwd}"
-}

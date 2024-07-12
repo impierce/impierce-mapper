@@ -1,3 +1,0 @@
-{ 
-    "intro": "\nDetta verktyg är skapat för att konvertera intyg mellan OpenBadges och ELM-formaten.\n\nDet tar en json-fil som indata och ger en ny, kartlagd json-fil som utdata. Omapprade fält kan kartläggas manuellt. Manuella kartläggningar kan sparas i en personlig kartläggningsfil för framtida användning.\n\nFör absoluta sökvägar börja med '/', för relativa sökvägar är den aktuella katalogen: %{pwd}"
-}

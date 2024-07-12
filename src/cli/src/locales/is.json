@@ -1,3 +1,0 @@
-{
-    "intro": "\nÞetta tól er gert til að breyta auðkenni milli OpenBadges og ELM sniða.\n\nÞað tekur inn json skrá sem inntak og skilar nýrri, kortlagðri json skrá. Ókortlagðir reitir geta verið kortlagðir handvirkt. Handvirkt kortlagning getur verið vistað í sérsniðnum kortlagningarskrá fyrir framtíðar notkun.\n\nFyrir fullkomna slóðir byrjaðu með '/', fyrir hlutfallslegar slóðir er núverandi skráarsafn: %{pwd}"
-}

@@ -1,3 +1,0 @@
-{
-    "intro": "\nTämä työkalu on tehty valtuutusten muuntamiseen OpenBadges- ja ELM-muotojen välillä.\n\nSe ottaa json-tiedoston syötteenä ja tuottaa uuden, kartoitetun json-tiedoston. Karttaamattomat kentät voidaan kartoittaa manuaalisesti. Manuaaliset kartoitukset voidaan tallentaa mukautettuun kartoitustiedostoon tulevaa käyttöä varten.\n\nAbsoluuttisia polkuja varten aloita '/', suhteellisia polkuja varten nykyinen hakemisto on: %{pwd}"
-}

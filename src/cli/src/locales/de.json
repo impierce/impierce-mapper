@@ -1,3 +1,0 @@
-{
-    "intro": "\nDieses Tool ist dafür gemacht, Berechtigungen zwischen den OpenBadges und dem ELM-Format zu konvertieren.\n\nEs nimmt eine json-Datei als Eingabe und gibt eine neue, zugeordnete json-Datei aus. Nicht zugeord nete Felder können manuell zugeordnet werden. Manuelle Zuordnungen können in einer benutzerdefinierten Zuordnungsdatei für zukünftige Verwendung gespeichert werden.\n\nFür absolute Pfade beginnen Sie mit '/', für relative Pfade ist das aktuelle Verzeichnis: %{pwd}"
-}
