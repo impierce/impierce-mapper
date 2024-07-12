@@ -2,7 +2,6 @@ mod backend;
 mod events;
 mod render;
 mod state;
-mod translations;
 
 use crate::events::*;
 use crate::render::*;
@@ -67,3 +66,67 @@ fn main() -> Result<()> {
     disable_raw_mode()?;
     Ok(())
 }
+
+// use jsonschema::JSONSchema;
+// use serde_json::json;
+
+// fn main() {
+//     println!("pwd: {}", std::env::current_dir().unwrap().display());
+//     let file = std::fs::File::open("./res/obv3_schema.json").unwrap();
+//     let reader = std::io::BufReader::new(file);
+
+//     let schema: serde_json::Value = serde_json::from_reader(reader).unwrap();
+//     let target_credential = json!(
+//           {
+//             "@context": [
+//               "https://www.w3.org/ns/credentials/v2",
+//               "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+//             ],
+//             "id": "http://example.com/credentials/3527",
+//             "type": ["VerifiableCredential", "OpenBadgeCredential"],
+//             "issuer": {
+//               "id": "https://example.com/issuers/876543",
+//               "type": ["Profile"],
+//               "name": "Example Corp"
+//             },
+//             "validFrom": "2010-01-01T00:00:00Z",
+//             "name": "Teamwork Badge",
+//             "credentialSubject": {
+//               "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+//               "type": ["AchievementSubject"],
+//               "achievement": {
+//                   "id": "https://example.com/achievements/21st-century-skills/teamwork",
+//                   "type": ["Achievement"],
+//                   "criteria": {
+//                     "narrative": "Team members are nominated for this badge by their peers and recognized upon review by Example Corp management."
+//                   },
+//                   "description": "This badge recognizes the development of the capacity to collaborate within a group environment.",
+//                   "name": "Teamwork"
+//                 }
+//             }
+//           }
+
+//     ); //
+
+//     // Draft is detected automatically
+//     // with fallback to Draft7
+//     let schema = JSONSchema::compile(&schema).expect("A valid schema");
+
+//     let result = schema.validate(&target_credential);
+//     let errors: Vec<ValidationError> = result.unwrap_err().collect();
+//     println!("{:#?}", errors.len());
+//     // println!("{:#?}", errors);
+//     println!("{:#?}", errors.get(0).unwrap());
+// }
+
+// instance: Object {
+//     "id": String("did:ebsi:org:12345689"),
+//     "identifier": Object {
+//         "id": String("urn:epass:identifier:2"),
+//         "notation": String("73737373"),
+//         "schemeName": String("University Aliance ID"),
+//         "type": String("Identifier"),
+//     },
+//     "legalName": Object {
+//         "en": String("ORGANIZACION TEST"),
+//     },

@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 clap = { version = "4", features = ["derive"] }
 dotenvy = { version = "0.15", features = ["clap"] }
-jsonschema = "0.17"
+jsonschema = "0.18"
 reqwest = { version = "0.12", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["serde_derive", "derive"] }
