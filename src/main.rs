@@ -13,7 +13,9 @@ use crossterm::execute;
 use crossterm::terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen};
 use jsonschema::ValidationError;
 use ratatui::prelude::{CrosstermBackend, Terminal};
+use serde_json::Value;
 use state::AppState;
+use std::fs::File;
 use std::io::{stdout, Result};
 
 // Load I18n macro, for allow you use `t!` macro in anywhere.
@@ -73,27 +75,54 @@ use serde_json::json;
 
 fn main() {
     println!("pwd: {}", std::env::current_dir().unwrap().display());
-    let file = std::fs::File::open("./res/obv3_schema.json").unwrap();
-    let reader = std::io::BufReader::new(file);
 
-    let schema: serde_json::Value = serde_json::from_reader(reader).unwrap();
-    let target_rdr = std::fs::File::open("./res/obv3_example.json").unwrap();
-    let target_credential: serde_json::Value = serde_json::from_reader(target_rdr).unwrap();
-    
-    // let target_credential = json!(
-    //     { }
-    // );
+    let schema_file = File::open("./json_files/elm/elm_schema_1_1.json").unwrap();
+    let schema: Value = serde_json::from_reader(schema_file).unwrap();
 
-    // Draft is detected automatically
-    // with fallback to Draft7
+    let target_file = File::open("./json_files/elm/Transcript_example.json").unwrap();
+    let target_credential: Value = serde_json::from_reader(target_file).unwrap();
+
     let schema = JSONSchema::compile(&schema).expect("A valid schema");
 
     let result = schema.validate(&target_credential);
-    let errors: Vec<ValidationError> = result.unwrap_err().collect();
-    println!("{:#?}", errors.len());
-    // println!("{:#?}", errors);
-    println!("{:#?}", errors.get(0).unwrap());
+    let errors: Vec<ValidationError>;
+    match result {
+        Ok(_) => {
+            println!("No validation errors found.");
+            return;
+        }
+        Err(err) => {
+            errors = err.collect();
+        }
+    };
+
+    println!("Total errors found: {}", errors.len());
+
+    for (i, error) in errors.iter().enumerate() {
+        println!("{:#?}", error);
+        if i < errors.len() - 1 {
+            println!("Press Enter to see the next error...");
+            let _ = std::io::stdin().read_line(&mut String::new());
+        }
+    }
 }
+
+// fn main() {
+//     println!("pwd: {}", std::env::current_dir().unwrap().display());
+//     let schema_file = std::fs::File::open("./json_files/elm/elm_schema.json").unwrap();
+//     let schema: serde_json::Value = serde_json::from_reader(schema_file).unwrap();
+
+//     let target_file = std::fs::File::open("./json_files/elm/Bengales_example.json").unwrap();
+//     let target_credential: serde_json::Value = serde_json::from_reader(target_file).unwrap();
+    
+//     let schema = JSONSchema::compile(&schema).expect("A valid schema");
+
+//     let result = schema.validate(&target_credential);
+//     let errors: Vec<ValidationError> = result.unwrap_err().collect();
+//     println!("{:#?}", errors.len());
+//     // println!("{:#?}", errors);
+//     println!("{:#?}", errors.get(1).unwrap());
+// }
 
 // instance: Object {
 //     "id": String("did:ebsi:org:12345689"),

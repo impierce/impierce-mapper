@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@cef-ebsi/vcdm1.1-europass-edc-schema": "^2.1.0"
+  }
+}

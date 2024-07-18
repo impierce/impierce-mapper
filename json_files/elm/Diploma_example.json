@@ -1,5 +1,5 @@
 {
-    "@context": "https://www.w3.org/2018/credentials/v1",
+    "@context": "https://www.w3.org/ns/credentials/v2",
     "id": "urn:credential:bfe82763-0eff-4cca-bc51-7988054d69ab",
     "type": [
       "VerifiableCredential",
@@ -126,8 +126,8 @@
       ]
     },
     "issuer": {
-      "id": "did:ebsi:org:12345689",
-      "type": "Organisation",
+      "id": "urn:epass:12345689:0",
+      "type": "IssuerNode",
       "location": [
         {
           "id": "urn:epass:certificateLocation:1",
