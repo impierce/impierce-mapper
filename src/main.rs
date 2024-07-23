@@ -18,6 +18,10 @@ use state::AppState;
 use std::fs::File;
 use std::io::{stdout, Result};
 
+use jsonschema::{Draft, JSONSchema};
+use serde_json::json;
+use std::fs;
+
 // Load I18n macro, for allow you use `t!` macro in anywhere.
 #[macro_use]
 extern crate rust_i18n;
@@ -70,16 +74,14 @@ i18n!("src/locales", fallback = "en");
 //     Ok(())
 // }
 
-use jsonschema::JSONSchema;
-use serde_json::json;
-
 fn main() {
     println!("pwd: {}", std::env::current_dir().unwrap().display());
-
-    let schema_file = File::open("./json_files/elm/elm_schema_1_1.json").unwrap();
+    
+    // let schema_file = File::open("./json_files/elm/elm_schema2_0.json").unwrap();
+    let schema_file = File::open("./json_files/ebsi-elm/vcdm2.0-europass-edc-schema/schema.json").unwrap();
     let schema: Value = serde_json::from_reader(schema_file).unwrap();
 
-    let target_file = File::open("./json_files/elm/Transcript_example.json").unwrap();
+    let target_file = File::open("./json_files/ebsi-elm/vcdm2.0-europass-edc-schema/examples/Bengales_highSchoolDiploma.json").unwrap();
     let target_credential: Value = serde_json::from_reader(target_file).unwrap();
 
     let schema = JSONSchema::compile(&schema).expect("A valid schema");

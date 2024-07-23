@@ -1,0 +1,27 @@
+{
+  "name": "@cef-ebsi/vcdm2.0-europass-edc-schema",
+  "version": "2.1.0",
+  "description": "Europass EDC credential (VCDM 2.0)",
+  "license": "EUPL-1.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.europa.eu/ebsi/json-schema.git",
+    "directory": "schemas/vcdm2.0/edc"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "examples",
+    "schema.json",
+    "schema.metadata.json"
+  ],
+  "dependencies": {
+    "@cef-ebsi/vcdm2.0-attestation-schema": "1.2.0"
+  }
+}

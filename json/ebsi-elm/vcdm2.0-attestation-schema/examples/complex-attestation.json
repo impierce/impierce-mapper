@@ -1,0 +1,64 @@
+{
+  "@context": ["https://www.w3.org/ns/credentials/v2"],
+  "id": "urn:uuid:003a1dd8-a5d2-42ef-8182-e921c0a9f2cd",
+  "type": ["VerifiableCredential", "VerifiableAttestation"],
+  "issuer": {
+    "id": "did:ebsi:ziDnioxYYLW1a3qUbqTFz4W",
+    "type": "organisation",
+    "legalName": {
+      "en": "some legal name",
+      "fr": "un nom légal"
+    },
+    "eIDASIdentifier": {
+      "id": "http://example.org/126839",
+      "type": "LegalIdentifier",
+      "notation": "126839",
+      "spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/FRA",
+        "type": "Concept",
+        "inScheme": {
+          "id": "http://publications.europa.eu/resource/authority/country",
+          "type": "ConceptScheme"
+        }
+      }
+    }
+  },
+  "validFrom": "2023-01-01T00:00:00Z",
+  "validUntil": "2025-01-01T00:00:00Z",
+  "credentialSubject": [
+    {
+      "type": "did",
+      "id": "did:key:z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9KbnTvvSLAcNJvfNeLNuB9Y3Mbhus5btx3CBNknmhSStgGbqhMkqfWNSYZ5Vd1A8xQdD948jQSEjShYE1SFe1wZSgsw5S4v6sfHVV2p6waDwh9hCjdWdjFUo3nyU1rYLbuZxg"
+    },
+    {
+      "type": "person",
+      "birthName": {
+        "en": "Alice"
+      },
+      "familyName": {
+        "en": "Wonderland"
+      },
+      "fullName": {
+        "en": "Alice Wonderland"
+      }
+    }
+  ],
+  "credentialSchema": [
+    {
+      "type": "JsonSchema",
+      "id": "https://api-test.ebsi.eu/trusted-schemas-registry/v3/schemas/0xff4f1fa4f0efd4306a218f669c7482d8cfcc7a13ba44f34af69f41889704002a"
+    },
+    {
+      "type": "ShaclValidator2017",
+      "id": "http://data.europa.eu/snb/model/ap/edc-generic-no-cv"
+    }
+  ],
+  "relatedResource": [
+    {
+      "id": "https://www.w3.org/ns/credentials/v2",
+      "mediaType": "application/ld+json",
+      "digestSRI": "sha384-lHKDHh0msc6pRx8PhDOMkNtSI8bOfsp4giNbUrw71nXXLf13nTqNJoRp3Nx+ArVK",
+      "digestMultibase": "moLay0ut7BUL5IfvPTaE2QhqrtH5cU3mrf4fQb/MhrH5NhGh+oDwdoqE0AynGRjFJ"
+    }
+  ]
+}

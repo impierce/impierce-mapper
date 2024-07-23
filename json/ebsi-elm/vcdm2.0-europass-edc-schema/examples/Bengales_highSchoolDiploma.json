@@ -1,0 +1,2925 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:credential:87ddce4d-de74-4838-b7a4-1f14d9c614ec",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "credentialSchema": [
+    {
+      "id": "http://data.europa.eu/snb/model/ap/edc-generic-full",
+      "type": "ShaclValidator2017"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x7ff3bc76bd5e37b3d29721b8698646a722a24a4f4ab0a0ba63d4bbbe0ef9758d",
+      "type": "JsonSchema"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:afsdlkj34134",
+    "type": "Person",
+    "identifier": [
+      {
+        "id": "urn:epass:identifier:2",
+        "type": "Identifier",
+        "notation": "5547554",
+        "schemeName": "Student ID"
+      }
+    ],
+    "givenName": {
+      "en": ["David"]
+    },
+    "familyName": {
+      "en": ["Smith"]
+    },
+    "fullName": {
+      "en": ["David Smith"]
+    },
+    "hasClaim": [
+      {
+        "id": "urn:epass:learningAchievement:6",
+        "type": "LearningAchievement",
+        "awardedBy": {
+          "id": "urn:epass:awardingProcess:1",
+          "type": "AwardingProcess",
+          "awardingBody": [
+            {
+              "id": "urn:epass:org:1",
+              "type": "Organisation",
+              "location": [
+                {
+                  "id": "urn:epass:location:1",
+                  "type": "Location",
+                  "address": [
+                    {
+                      "id": "urn:epass:address:1",
+                      "type": "Address",
+                      "countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                        "type": "Concept",
+                        "inScheme": {
+                          "id": "http://publications.europa.eu/resource/authority/country",
+                          "type": "ConceptScheme"
+                        },
+                        "prefLabel": {
+                          "en": ["Belgium"]
+                        },
+                        "notation": "country"
+                      },
+                      "fullAddress": {
+                        "id": "urn:epass:note:1",
+                        "type": "Note",
+                        "noteLiteral": {
+                          "en": ["Here"]
+                        }
+                      }
+                    }
+                  ],
+                  "description": {
+                    "en": ["The Address"]
+                  }
+                }
+              ],
+              "legalName": {
+                "en": ["University of Life"]
+              },
+              "registration": {
+                "id": "urn:epass:legalIdentifier:2",
+                "type": "LegalIdentifier",
+                "notation": "987654321",
+                "spatial": {
+                  "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                  "type": "Concept",
+                  "inScheme": {
+                    "id": "http://publications.europa.eu/resource/authority/country",
+                    "type": "ConceptScheme"
+                  },
+                  "prefLabel": {
+                    "en": ["Belgium"]
+                  },
+                  "notation": "country"
+                }
+              }
+            }
+          ]
+        },
+        "title": {
+          "en": [
+            "Higher  Education Entrance Qualification - German International ABITUR School"
+          ]
+        },
+        "entitlesTo": [
+          {
+            "id": "urn:epass:entitlement:1",
+            "type": "LearningEntitlement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "The owner completed the Higher Education Entrace Qualification for admission to Higher Education instititutions"
+              ]
+            },
+            "title": {
+              "en": ["Passed the German International Abitur"]
+            },
+            "specifiedBy": {
+              "id": "urn:epass:learningEntitlementSpec:1",
+              "type": "LearningEntitlementSpecification",
+              "title": {
+                "en": ["Passed the German International Abitur"]
+              },
+              "dcType": [
+                {
+                  "id": "http://data.europa.eu/snb/entitlement/64aad92881",
+                  "type": "Concept",
+                  "inScheme": {
+                    "id": "http://data.europa.eu/snb/entitlement/25831c2",
+                    "type": "ConceptScheme"
+                  },
+                  "prefLabel": {
+                    "en": ["learning opportunity"]
+                  }
+                }
+              ],
+              "entitlementStatus": {
+                "id": "http://data.europa.eu/snb/entitlement-status/b7015a8a8c",
+                "type": "Concept",
+                "inScheme": {
+                  "id": "http://data.europa.eu/snb/entitlement-status/25831c2",
+                  "type": "ConceptScheme"
+                },
+                "prefLabel": {
+                  "en": ["actual"]
+                }
+              }
+            }
+          }
+        ],
+        "hasPart": [
+          {
+            "id": "urn:epass:learningAchievement:1",
+            "type": "LearningAchievement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "Individual results achieved during the Qualilification phase Q"
+              ]
+            },
+            "title": {
+              "en": ["History"]
+            },
+            "provenBy": [
+              {
+                "id": "urn:epass:learningAssessment:1",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["History semester 3"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:1",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["History semester 3"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:2",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["History semester 1"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:2",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["History semester 1"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:3",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["History semester 2"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:3",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["History semester 2"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:4",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["History semester 4"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:4",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["History semester 4"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAchievementSpec:1",
+              "type": "LearningAchievementSpecification",
+              "additionalNote": [
+                {
+                  "id": "urn:epass:note:3",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": [
+                      "ISCED 0232: Literature and linguistics. Currently no specific code for native language(?) (Aktuell kein spezifischer code für Muttersprache(?))"
+                    ]
+                  },
+                  "subject": {
+                    "id": "urn:epass:concept:dbd7241e-e450-4160-84a3-cc4be281a773",
+                    "type": "Concept",
+                    "inScheme": {
+                      "id": "urn:epass:conceptScheme:66cfdba4-db7f-4257-bd24-3ea52844d50d",
+                      "type": "ConceptScheme"
+                    },
+                    "prefLabel": {
+                      "en": ["More Information"]
+                    }
+                  }
+                }
+              ],
+              "title": {
+                "en": ["History"]
+              }
+            }
+          },
+          {
+            "id": "urn:epass:learningAchievement:2",
+            "type": "LearningAchievement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "Individual results achieved during the Qualilification phase Q"
+              ]
+            },
+            "title": {
+              "en": ["Art"]
+            },
+            "provenBy": [
+              {
+                "id": "urn:epass:learningAssessment:5",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Art semester 1"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:5",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Art semester 1"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:6",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Art semester 2"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:6",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Art semester 2"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:7",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Art semester 3"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:7",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Art semester 3"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:8",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Art semester 4"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:8",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Art semester 4"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAchievementSpec:2",
+              "type": "LearningAchievementSpecification",
+              "additionalNote": [
+                {
+                  "id": "urn:epass:note:4",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": [
+                      "ISCED 0232: Literature and linguistics. Currently no specific code for native language(?) (Aktuell kein spezifischer code für Muttersprache(?))"
+                    ]
+                  },
+                  "subject": {
+                    "id": "urn:epass:concept:49166b48-abb0-4d47-a63d-095f0bab0c4d",
+                    "type": "Concept",
+                    "inScheme": {
+                      "id": "urn:epass:conceptScheme:abb415ab-8d9b-4974-8a5c-0e8cdaa22ee1",
+                      "type": "ConceptScheme"
+                    },
+                    "prefLabel": {
+                      "en": ["More Information"]
+                    }
+                  }
+                }
+              ],
+              "title": {
+                "en": ["Art"]
+              }
+            }
+          },
+          {
+            "id": "urn:epass:learningAchievement:3",
+            "type": "LearningAchievement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "Individual results achieved during the Qualilification phase Q"
+              ]
+            },
+            "title": {
+              "en": ["Religion"]
+            },
+            "provenBy": [
+              {
+                "id": "urn:epass:learningAssessment:9",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Religion semester 1"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:9",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Religion semester 1"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:10",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Religion semester 2"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:10",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Religion semester 2"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:11",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Religion semester 4"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:11",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Religion semester 4"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:12",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Religion semester 3"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:12",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Religion semester 3"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAchievementSpec:3",
+              "type": "LearningAchievementSpecification",
+              "additionalNote": [
+                {
+                  "id": "urn:epass:note:5",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": [
+                      "ISCED 0232: Literature and linguistics. Currently no specific code for native language(?) (Aktuell kein spezifischer code für Muttersprache(?))"
+                    ]
+                  },
+                  "subject": {
+                    "id": "urn:epass:concept:f2ec5f98-5cbc-4ef2-a166-772070f955c4",
+                    "type": "Concept",
+                    "inScheme": {
+                      "id": "urn:epass:conceptScheme:1e6dba61-3cbd-4d32-80d9-a59a860b56f6",
+                      "type": "ConceptScheme"
+                    },
+                    "prefLabel": {
+                      "en": ["More Information"]
+                    }
+                  }
+                }
+              ],
+              "title": {
+                "en": ["History"]
+              }
+            }
+          },
+          {
+            "id": "urn:epass:learningAchievement:4",
+            "type": "LearningAchievement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "Individual results achieved during the Qualilification phase Q"
+              ]
+            },
+            "title": {
+              "en": ["English"]
+            },
+            "provenBy": [
+              {
+                "id": "urn:epass:learningAssessment:13",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["English semester 1"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:13",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["English semester 1"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:14",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["English semester 2"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:14",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["English semester 2"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:15",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["English semester 3"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:15",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["English semester 3"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:16",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["English semester 4"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:16",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["English semester 4"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAchievementSpec:4",
+              "type": "LearningAchievementSpecification",
+              "additionalNote": [
+                {
+                  "id": "urn:epass:note:6",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": [
+                      "ISCED 0232: Literature and linguistics. Currently no specific code for native language(?) (Aktuell kein spezifischer code für Muttersprache(?))"
+                    ]
+                  },
+                  "subject": {
+                    "id": "urn:epass:concept:7570d85a-516c-42f7-acdf-e372482ef498",
+                    "type": "Concept",
+                    "inScheme": {
+                      "id": "urn:epass:conceptScheme:e9ecb7a8-7078-4748-ad02-a8b7209902db",
+                      "type": "ConceptScheme"
+                    },
+                    "prefLabel": {
+                      "en": ["More Information"]
+                    }
+                  }
+                }
+              ],
+              "title": {
+                "en": ["English"]
+              }
+            }
+          },
+          {
+            "id": "urn:epass:learningAchievement:5",
+            "type": "LearningAchievement",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "description": {
+              "en": [
+                "Individual results achieved during the Qualilification phase Q"
+              ]
+            },
+            "title": {
+              "en": ["German"]
+            },
+            "provenBy": [
+              {
+                "id": "urn:epass:learningAssessment:17",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["German semester 1"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:17",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["German semester 1"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:18",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["German semester 2"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:18",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["German semester 2"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:19",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["German semester 3"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:19",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["German semester 3"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:20",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["German semester 4"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:20",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["German semester 4"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAchievementSpec:5",
+              "type": "LearningAchievementSpecification",
+              "additionalNote": [
+                {
+                  "id": "urn:epass:note:7",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": [
+                      "ISCED 0232: Literature and linguistics. Currently no specific code for native language(?) (Aktuell kein spezifischer code für Muttersprache(?))"
+                    ]
+                  },
+                  "subject": {
+                    "id": "urn:epass:concept:fe5c7749-eb18-4298-9e59-d622e50023cf",
+                    "type": "Concept",
+                    "inScheme": {
+                      "id": "urn:epass:conceptScheme:e0820f5a-4f18-48bd-9352-b61d83456c91",
+                      "type": "ConceptScheme"
+                    },
+                    "prefLabel": {
+                      "en": ["More Information"]
+                    }
+                  }
+                }
+              ],
+              "title": {
+                "en": ["German"]
+              }
+            }
+          }
+        ],
+        "provenBy": [
+          {
+            "id": "urn:epass:learningAssessment:23",
+            "type": "LearningAssessment",
+            "awardedBy": {
+              "id": "urn:epass:awardingProcess:1",
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "id": "urn:epass:org:1",
+                  "type": "Organisation",
+                  "location": [
+                    {
+                      "id": "urn:epass:location:1",
+                      "type": "Location",
+                      "address": [
+                        {
+                          "id": "urn:epass:address:1",
+                          "type": "Address",
+                          "countryCode": {
+                            "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                            "type": "Concept",
+                            "inScheme": {
+                              "id": "http://publications.europa.eu/resource/authority/country",
+                              "type": "ConceptScheme"
+                            },
+                            "prefLabel": {
+                              "en": ["Belgium"]
+                            },
+                            "notation": "country"
+                          },
+                          "fullAddress": {
+                            "id": "urn:epass:note:1",
+                            "type": "Note",
+                            "noteLiteral": {
+                              "en": ["Here"]
+                            }
+                          }
+                        }
+                      ],
+                      "description": {
+                        "en": ["The Address"]
+                      }
+                    }
+                  ],
+                  "legalName": {
+                    "en": ["University of Life"]
+                  },
+                  "registration": {
+                    "id": "urn:epass:legalIdentifier:2",
+                    "type": "LegalIdentifier",
+                    "notation": "987654321",
+                    "spatial": {
+                      "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                      "type": "Concept",
+                      "inScheme": {
+                        "id": "http://publications.europa.eu/resource/authority/country",
+                        "type": "ConceptScheme"
+                      },
+                      "prefLabel": {
+                        "en": ["Belgium"]
+                      },
+                      "notation": "country"
+                    }
+                  }
+                }
+              ]
+            },
+            "title": {
+              "en": ["Overall Qualification Q+A"]
+            },
+            "grade": {
+              "id": "urn:epass:note:2",
+              "type": "Note",
+              "noteLiteral": {
+                "en": ["Excellent (5)"]
+              }
+            },
+            "hasPart": [
+              {
+                "id": "urn:epass:learningAssessment:21",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": [" Qualification Phase (Q) results"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:21",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": [" Qualification Phase (Q) results"]
+                  }
+                }
+              },
+              {
+                "id": "urn:epass:learningAssessment:22",
+                "type": "LearningAssessment",
+                "awardedBy": {
+                  "id": "urn:epass:awardingProcess:1",
+                  "type": "AwardingProcess",
+                  "awardingBody": [
+                    {
+                      "id": "urn:epass:org:1",
+                      "type": "Organisation",
+                      "location": [
+                        {
+                          "id": "urn:epass:location:1",
+                          "type": "Location",
+                          "address": [
+                            {
+                              "id": "urn:epass:address:1",
+                              "type": "Address",
+                              "countryCode": {
+                                "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                                "type": "Concept",
+                                "inScheme": {
+                                  "id": "http://publications.europa.eu/resource/authority/country",
+                                  "type": "ConceptScheme"
+                                },
+                                "prefLabel": {
+                                  "en": ["Belgium"]
+                                },
+                                "notation": "country"
+                              },
+                              "fullAddress": {
+                                "id": "urn:epass:note:1",
+                                "type": "Note",
+                                "noteLiteral": {
+                                  "en": ["Here"]
+                                }
+                              }
+                            }
+                          ],
+                          "description": {
+                            "en": ["The Address"]
+                          }
+                        }
+                      ],
+                      "legalName": {
+                        "en": ["University of Life"]
+                      },
+                      "registration": {
+                        "id": "urn:epass:legalIdentifier:2",
+                        "type": "LegalIdentifier",
+                        "notation": "987654321",
+                        "spatial": {
+                          "id": "http://publications.europa.eu/resource/authority/country/BEL",
+                          "type": "Concept",
+                          "inScheme": {
+                            "id": "http://publications.europa.eu/resource/authority/country",
+                            "type": "ConceptScheme"
+                          },
+                          "prefLabel": {
+                            "en": ["Belgium"]
+                          },
+                          "notation": "country"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "title": {
+                  "en": ["Final Examination results (A)"]
+                },
+                "grade": {
+                  "id": "urn:epass:note:2",
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": ["Excellent (5)"]
+                  }
+                },
+                "specifiedBy": {
+                  "id": "urn:epass:learningAssessmentSpec:22",
+                  "type": "LearningAssessmentSpecification",
+                  "title": {
+                    "en": ["Final Examination results (A)"]
+                  }
+                }
+              }
+            ],
+            "specifiedBy": {
+              "id": "urn:epass:learningAssessmentSpec:23",
+              "type": "LearningAssessmentSpecification",
+              "title": {
+                "en": ["Overall Diploma Assessment"]
+              },
+              "gradingScheme": {
+                "id": "urn:epass:gradingScheme:1",
+                "type": "GradingScheme",
+                "description": {
+                  "en": [
+                    "The Germany national grading scheme for High school consists of  six grade levels with\\n                                    numerical equivalents: sehr gut \\u2013 1 (very good); gut \\u2013 2 (good);\\n                                    befriedigend \\u2013 3 (satisfatory); ausrcichend \\u2013 4 (addequate);\\n                                    mangelhalft  \\u2013 5 (unsatisfactory- fail); ungenügend \\u2013 6\\n                                    (insufficient- fail). The minimum passing grade is ausrcichend \\u2013\\n                                    4. /n Equivalents in points: 15, 14, 13 \\u2013 1 (very good); 12, 11,\\n                                    10 \\u2013 2 (good); 09, 08, 07\\u2013 3 (satisfatory); 06, 05, 04\\u2013 4\\n                                    (addequate); 03, 02, 01\\u2013 5 (unsatisfactory- fail); 0\\u2013 6\\n                                    (insufficient- fail)."
+                  ]
+                },
+                "title": {
+                  "en": ["Grading scheme in Germany"]
+                }
+              }
+            }
+          }
+        ],
+        "specifiedBy": {
+          "id": "urn:epass:qualification:1",
+          "type": "Qualification",
+          "title": {
+            "en": ["German International Abitur"]
+          },
+          "creditPoint": [
+            {
+              "id": "urn:epass:creditPoint:1",
+              "type": "CreditPoint",
+              "framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c5af",
+                "type": "Concept",
+                "inScheme": {
+                  "id": "http://data.europa.eu/snb/education-credit/25831c2",
+                  "type": "ConceptScheme"
+                },
+                "prefLabel": {
+                  "en": ["European Credit Transfer System"]
+                }
+              },
+              "point": "0"
+            }
+          ],
+          "maximumDuration": "P21D",
+          "volumeOfLearning": "P60D",
+          "nqfLevel": [
+            {
+              "id": "http://data.europa.eu/snb/qdr/c_bd9f8e42",
+              "type": "Concept",
+              "inScheme": {
+                "id": "http://data.europa.eu/snb/qdr/25831c2",
+                "type": "ConceptScheme"
+              },
+              "prefLabel": {
+                "en": ["DQR Level 5"]
+              }
+            }
+          ],
+          "eqfLevel": {
+            "id": "http://data.europa.eu/snb/eqf/4",
+            "type": "Concept",
+            "inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            },
+            "prefLabel": {
+              "en": ["Level 4"]
+            }
+          },
+          "isPartialQualification": true
+        }
+      }
+    ]
+  },
+  "issuanceDate": "2024-03-26T16:03:32+01:00",
+  "issuer": {
+    "id": "did:ebsi:org:12345689",
+    "type": "Organisation",
+    "location": [
+      {
+        "id": "urn:epass:certificateLocation:1",
+        "type": "Location",
+        "address": {
+          "id": "urn:epass:certificateAddress:1",
+          "type": "Address",
+          "countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "inScheme": {
+              "id": "http://publications.europa.eu/resource/authority/country",
+              "type": "ConceptScheme"
+            },
+            "notation": "country",
+            "prefLabel": { "en": "Spain" }
+          }
+        }
+      }
+    ],
+    "identifier": {
+      "id": "urn:epass:identifier:2",
+      "type": "Identifier",
+      "schemeName": "University Aliance ID",
+      "notation": "73737373"
+    },
+    "legalName": { "en": "ORGANIZACION TEST" }
+  },
+  "issued": "2024-03-26T16:03:32+01:00",
+  "validFrom": "2020-07-20T00:00:00+02:00",
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/e34929035b",
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://data.europa.eu/snb/credential/25831c2",
+        "type": "ConceptScheme"
+      },
+      "prefLabel": {
+        "en": ["Generic"]
+      }
+    }
+  ],
+  "displayParameter": {
+    "id": "urn:epass:displayParameter:1",
+    "type": "DisplayParameter",
+    "language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "inScheme": {
+          "id": "http://publications.europa.eu/resource/authority/language",
+          "type": "ConceptScheme"
+        },
+        "prefLabel": {
+          "en": ["English"]
+        },
+        "notation": "language"
+      }
+    ],
+    "description": {
+      "en": [
+        "EBSI Example (not 100% complete) - https://github.com/Knowledge-Innovation-Centre/ESBI-JSON-schemas/blob/main/examples%20of%20credentials/German%20example/Bengales_highSchoolDiploma_v1.json"
+      ]
+    },
+    "individualDisplay": [
+      {
+        "id": "urn:epass:individualDisplay:f36142e4-9ce0-4aca-b80f-2a3762daee76",
+        "type": "IndividualDisplay",
+        "language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "inScheme": {
+            "id": "http://publications.europa.eu/resource/authority/language",
+            "type": "ConceptScheme"
+          },
+          "prefLabel": {
+            "en": ["English"]
+          },
+          "notation": "language"
+        },
+        "displayDetail": [
+          {
+            "id": "urn:epass:displayDetail:059df8bd-e802-49fc-8e92-2568d0333432",
+            "type": "DisplayDetail",
+            "image": {
+              "id": "urn:epass:mediaObject:77eeb2c5-01c8-4962-9217-e49a108e0a76",
+              "type": "MediaObject",
+              "content": "/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCARjAxoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiobq7trG2e5u7iK3gTG6WZwirk4GSeByQKgsdY0zVGddP1G0u2QAuLedZCuemcE4oAu0UUUAFFFFABRRRQAUUUUAFFZjeI9DS7Nq2s6cLkP5ZhN0m8PnG3Gc5zxitOgAooqhe63pOmTLDf6pZWsrLuCT3CRsV6ZwT04P5UAX6KjgnhuoEnt5UlhkG5JI2DKw9QR1qSgAooooAKKzG8R6Gl2bVtZ04XIfyzCbpN4fONuM5znjFadABRRRQAUUUUAFFFFABRRWbdeIdEsbl7a81jT7edMboprlEZcjIyCcjgg0AaVFIrBlDKQVIyCOhpaACiiigAooooAKKKKACiobq7trG2e5u7iK3gTG6WZwirk4GSeByQKgsdY0zVGddP1G0u2QAuLedZCuemcE4oAu0UUUAFFFFABRWZbeI9DvLhLe11nTp53OFjiukZmPsAcmtOgAooooAKKhuru2sbZ7m7uIreBMbpZnCKuTgZJ4HJAqCx1jTNUZ10/UbS7ZAC4t51kK56ZwTigC7RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRR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igAooooAKKKKACiiigAooooAKKKKACqd9pOm6p5f9oafaXfl52faIVk25xnGQcZwPyq5RQBBaWVrp9uLeytobaBSSI4YwijPXgcVPRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABUF5dxWNnNdTkiOJC7YGScdgO5qeqGtWkt7pFxBAFM2A8YY4DMpDAE9gSMUANhudVd0aXTbeOFiM/6WWkUH1XZtyPZj+NMk1K7mvZ7bTbOKf7OQs0k85iQOQG2jCsScEE8Ac9c5p8OsRTSJF9lv0lYgFXtJAFPfL428eoJHpmsp7G3stRvmvE1TZcTedHJaSXBUgqoIKxHggg9RyMc9cAF6fX1g0SXUHtZA8EqwzW+fmVt4U4Iznrkeox0zVXW7zWE0h5VtIID58AXF4wfBkUEHCYHYEAkYJ545Lmzi/sFxY212POu4ZWE3mNI2JY8sd5LY2r36AVoa9BLcaPKkEZkkVo5Qi9W2OrED3IWgBt7dTQ6X5uoWVux+0RIIo5i68yIA2Sg5BOcY7Dn0o+IBdXGqaXZrZ2tzayO7NHPMVDsEPDDYwIGc9+cccZqzqk39paNm2huCRdW/yvA6NxKhJ2sAcAc56cH0qa/ikfWtJkWNmRGl3sBkLlCBk9qAItOmkXVpLOfTrS2kitYyj28pcbNzALyi4AwfzpRql9dNM+nafFPbxO0fmS3PlmRlJDbAFbIBBGSRyPTmpEikHieaby28o2cah8cEh3OM+vIrHtrG001JLW8j1gOssjK1tJdNG6sxYEeWSFODyDjnPbmgDVfWhJa2L2duZZr0lY45X8sIQCW3nBxjBHAPP51etJLx1b7ZbwwuD8ohmMgI+pVf5VmyQ6bbaTbwy2F2bYsXUCKSWSNySdxK5cMSTz707RWma4uwn2z+zwEEBvFYSbvm343/Pt+5jdznd2xQA3X7i+guNJFkkbeZd7XDztGG/duQDhTkcZ/AcekWt3FxEuiyzWwNx9vA8mGTeCTHIBhiF9skgY5q3rccm2xuUieVbW6WWRY13Nt2spIA5ON2cDnimX7G9k0eeCKYot7ubdEyFR5cgyQQCBkjr6j1oAlg1C6XUI7O/tIoHmRmheGcyK23GQcqpB5z0PAPNPuJ9TWd1tbC3kiXGHmujGW4zwAjfTkjp+NR38Uj61pMixsyI0u9gMhcoQMntWbLFb/wBp3/8Aa2mz3rtIDa5tWmj8vYuAvBVDu3Zzj1zjFAEmr6ncXHhpLzT0KSNcRI6ySmNkImCsuVB53Aqe2M9eh2rVrp4ibuGGKTPCxSmQY9clV/lXN2en3ieCXtjaeXcJdyzC3jXaMC6aTaoOOCBx2ORXSWt1HeRGSNZlUHGJoXiP5MAfxoAnooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAopCcAk549Bmuan+IHhu21D+z57y4jvMgeQ1jOHOeny7M1UYSl8KuTKUY/E7HTUVgp408PtdJbSX5tpn4VbuCS33fTzFWt7rRKMo/ErDUk9mFFFFSMKKKKACiqGsa3p2gWQvNUultoC4jDsCcsegwAT2P5VeVldFdGDKwyCDkEU7O1xXV7C0VHcTpbQPM6yMqDJEcbOx+iqCT+ArJ8P8AijTfE32o6aZmW1cJI0kRT5jngZ54xz9aajJpyS0QOSTt1NqiisrUvEmkaTcpa3l4q3MgysEaNJIR67EBOPwpKLk7JA2lqzVorGtfFmhXt5DZW+oxtdzMVS3KsJMhSxyhGVGATkgVs0Si47qwKSezCiiikMKKq6lqVppGnzX9/OsFrCMySMCcc46Dk8kU+zvLfULOG7tJVlt5kDxuvRgehp2dr9BXV7E9FFYNr4v0q98QnQ4PtRvlQu6SWzx7FAzk7gD3H501GUr2WwOSW5vUUUVIwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvJfDijxF8bdY1XG6DTlaND23ACIfnhzXpeuakukaFf6i2MW0DyAHuQOB+JwK4X4Maa0Hhi61SXJlv7kncerKnA/8eL11UfcpTn8vv3Oer71SMPmdxrui2mv6PcadeRq8cqEAkZKN2YehBrhPg1r11qOi3ulXcjSNpzqImY5IRs4X8Cp/MV3HiPWItB8O32pysB5ERKZ/ifoo/EkCvMfhp/xSfgLWvFN7Gdk2PJQ8bwmQv5u+PwqqUXLDyT7q3qTUdq0Wuzv6Hqt9q9jp0kUVzPiaXPlworSSPjrhFBY/gKrW/ibSLrU002K7zevG0nkGJ1ZVBIO4EfL06HBrD+H2nTtpR8Rao3m6tqw855G/giP3EX0XGDj39qyvA7Ra58QvFXiKLDQhktIHHRgAASP++FP41Hsorm/u/mX7ST5fP8jsrLxJpGoarLpdpepLexJ5jxBWBVcgZyRjuPzqWbXNNt9at9Hmu0TULiMyRQkHLKM85xjseM9jXG6qPsPxt0SdRtW+sJIXI7lQ5/ov5V0M1jFq/jCzvvKUx6QkiibHLyuANoPoq5J92HcGlKnBWfRq/wA/+HGpyd11Tt/XyK/iHVfCt7d2/h/W8TzzTqIrd4JOXzgEEDHfrnHWunASKMABURR06AAV504/t743ov3oNEs8n08xh/P5x/3zUvia+m8TeNrbwXbSMljGn2jVGQ4LpwRHkdAcrn/eHpVOjflin0u/IlVbXlbrZeZ0Go+MtJtdKu7uC580QxSNHIsTmKR1UnasmNhPHQGsz4Vaa1h4FtppAfOvpHunJ6nJwP8Ax1Qfxqh8VpIYvClloFqiLNf3MUFvCowAqkdB6A7R+Nd7Y2kdhYW1nCMRW8SxJ9FAA/lSlaNHT7T/AC/4ccbyq69F+ZPXk/g7Vo9M+KXiSy1vMWoX0+LaSXoVDMVQE9ipTHrtA9K9TnuYbYRmZwgkdY1z3YnAFcl4/wDA0PivT/tFtiLV7dc28o43452MfT0PY/jSw8oq8J7S0uFaMnaUd10Ni70GGbxZYa8RGrWttNE7H7xLFdv4AeZ+dPsvFGialqbadY6lDc3SoXZISWAUYySRx3HesD4YeJbzxD4addRJa8spfIkkbq4wCCffsfpnvXN+CYm8U+MfFGqMG+xTTiJpBx5kQJxGD6EBS3sMfxcX7F+8qj+H/Mn2vwuH2j0Kw8VaHqmqy6ZY6lDPeRKWaNMngHBw2MH8DRD4r0K51w6LDqUMmoDP7lcnkdRnGMjB4zng1wOmwNr/AMWNd+ygw2llAtkZIvl8tBgMqkdGJVgPQFu4FXbS1h1D4z7LaJI7TQdPEaLGuFDsOB+Uh/75puhBX32uCrTdvWx0virXfDVnaPp3iF8w3ICmEwSMJO4AKjrnHeptY1jTvBnh9XFnObeCPbFBbQlsADueij3J/OuW8ZD+3PiX4X0IfNFbE3s47YByAf8Avgj/AIFV34r3kkXg8afBzcalcx2yKOpydx/9BA/GlGkm6cX11YSqNc8uxoeBvEc/iHSPtN6JUupWaUR/ZnSOOMnCKrlQr8AHIJ61g+Ebm3uvGPi/xVdzRxWsUos45nYBQiYDHJ/3UP411uozReFvBc7xEBNPstsfuVXCj8TiuT+GWjqPB9ne6gmIFd7iOOTozknMzD1AAC+mCe4w1y8k5rRPT9RPm5oxerWv6HZ6L4j0jxEkz6TepciBgsm0EFSenBA9Dz7VqV538KY2vIdd8Quu06pfsyDH8Ckkfq5H4V6JWFaChUcV0NqU3OCkwooorI0CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDi/iRaa7rHh6TR9F0uW4NwymWbzokUKDnHzMDnIHbGKXwzJrWh+GLDSz4Vu/OtogjH7Vb7GbqTkPnkknpXZ0Vsq3uezsrb9f8zL2Xv8APfU4a/8ACWreL72CTxNcQ2+mQPvj0yzctvPrJIQMntwOnTFaXjPw1Jrfgq40bTRFC4VPIj+6nyEEL7DAx+VdPRS9tO6a6bD9lGzT6nH6LB4ku9Dt9L1PTYNNiggWGR1uRI84UYwoXhAccnJOCQPUVfhv4e1rQdIa21KGK0/fvM6I6u0zMAATjhVAA4ByT6Ywe6opus2nGysxKkk077HHeKfDOpaz4t0DULG4W2jshN50/BZQcABQepPzc9B+h6y2torO2jt4F2xoMAZyfqT3J6k96loqJVJSiovoWoJNtdTgfDHh7XrDxR4guruCOCG/vPNF0JQzPErMVRV7ZyMk446DPIhOheIdC+I+o67p2mRanaahEEINysTRH5eue2V7A8H2r0SitPrErttLVWM/YxslfZ3POdc8MeIb7xloOtG3trz7NuaVPP8ALihb+EDIJIBwcgZJz0GAPQbaOWK3RJ5vOlHLvt2gk88DsPT27nrUtFROq5pJ9C4U1Ftrqcz400nWNYsbCHRZYYbiG8S5MszEKuwMQCACTltvam3GqeLDZmCD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UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/9k=",
+              "contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "inScheme": {
+                  "id": "http://data.europa.eu/snb/encoding/25831c2",
+                  "type": "ConceptScheme"
+                },
+                "prefLabel": {
+                  "en": ["base64"]
+                }
+              },
+              "contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/JPEG",
+                "type": "Concept",
+                "inScheme": {
+                  "id": "http://publications.europa.eu/resource/authority/file-type",
+                  "type": "ConceptScheme"
+                },
+                "prefLabel": {
+                  "en": ["JPEG"]
+                },
+                "notation": "file-type"
+              }
+            },
+            "page": 1
+          }
+        ]
+      }
+    ],
+    "primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://publications.europa.eu/resource/authority/language",
+        "type": "ConceptScheme"
+      },
+      "prefLabel": {
+        "en": ["English"]
+      },
+      "notation": "language"
+    },
+    "title": {
+      "en": ["Bengales_highSchoolDiploma"]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@cef-ebsi/vcdm2.0-attestation-schema",
+  "version": "1.2.0",
+  "description": "EBSI Verifiable Attestation (VCDM 2.0)",
+  "license": "EUPL-1.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.europa.eu/ebsi/json-schema.git",
+    "directory": "schemas/vcdm2.0/attestation"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "examples",
+    "schema.json",
+    "schema.metadata.json"
+  ],
+  "dependencies": {}
+}

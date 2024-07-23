@@ -1,0 +1,19 @@
+{
+  "@context": ["https://www.w3.org/ns/credentials/v2"],
+  "id": "urn:uuid:08e26d22-8dca-4558-9c14-6e7aa7275b9b",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "VerifiableAuthorisationToOnboard"
+  ],
+  "issuer": "did:ebsi:ziDnioxYYLW1a3qUbqTFz4W",
+  "validFrom": "2023-01-01T00:00:00Z",
+  "validUntil": "2025-01-01T00:00:00Z",
+  "credentialSubject": {
+    "id": "did:ebsi:zdPj1GPXjfERXxXPE1YTYdJ"
+  },
+  "credentialSchema": {
+    "id": "https://api-test.ebsi.eu/trusted-schemas-registry/v2/schemas/0x23039e6356ea6b703ce672e7cfac0b42765b150f63df78e2bd18ae785787f6a2",
+    "type": "JsonSchema"
+  }
+}
