@@ -11,7 +11,7 @@
       "type": ["Profile"],
       "name": "Example University"
     },
-    "validFrom": "2010-03-01T00:00:00Z",
+    "validFrom": "2010-01-01T00:00:00Z",
     "name": "Teamwork Badge",
     "credentialSubject": {
       "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
@@ -28,4 +28,4 @@
         "name": "Teamwork"
       }
     }
-  }
+}

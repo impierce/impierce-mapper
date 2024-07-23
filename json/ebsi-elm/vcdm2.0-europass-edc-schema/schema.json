@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "file:///home/me/Documents/IPT/impierce-mapper/json_files/ebsi-elm/vcdm2.0-europass-edc-schema",
+  "$id": "file:///home/me/Documents/IPT/impierce-mapper/json/ebsi-elm/vcdm2.0-europass-edc-schema",
   "title": "Europass EDC credential",
   "description": "Schema for EDC credential based on ELM 3.2",
   "type": "object",
