@@ -2,7 +2,6 @@ mod backend;
 mod events;
 mod render;
 mod state;
-mod validate;
 
 use crate::events::*;
 use crate::render::*;
@@ -36,13 +35,6 @@ fn main() -> Result<()> {
         mapping_path: "json/mapping/mapping_empty.json".to_string(),
         output_path: "json/output_credential2.json".to_string(),
         custom_mapping_path: "json/mapping/custom_mapping.json".to_string(),
-
-        optional_fields: vec![
-            ("".to_string(), "".to_string()),
-            ("credentialSubject/e-Mail".to_string(), "".to_string()),
-            ("credentialSubject/phoneNumber".to_string(), "".to_string()),
-            ("credentialSubject/gender".to_string(), "".to_string()),
-        ], // todo: load in optional fields properly
 
         selected_input_field: 1, // todo: what if none? Also after going back to tab 1 and changing file paths?
         selected_missing_field: 1, // todo: what if none?

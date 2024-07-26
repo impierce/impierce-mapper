@@ -7,3 +7,4 @@ pub mod repository;
 pub mod selector;
 pub mod transformations;
 pub mod schema_fields;
+pub mod validate;
