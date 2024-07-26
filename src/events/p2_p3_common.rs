@@ -4,7 +4,7 @@ use std::io::Write;
 
 use super::is_mouse_over_area;
 use crate::{
-    backend::{repository::update_repository, selector::selector},
+    backend::{preload_p3::preload_p3, repository::update_repository, selector::selector},
     state::{AppState, MappingOptions, P2P3Tabs, Pages, Transformations},
     trace_dbg,
 };
@@ -272,9 +272,13 @@ pub fn handle_scroll_down(state: &mut AppState, mouse_event: MouseEvent) {
         {
             state.selected_input_field += 1;
         } else if is_mouse_over_area(state.output_fields_area_p2_p3, mouse_event.column, mouse_event.row)
-            && state.selected_missing_field <= state.amount_missing_fields
         {
-            state.selected_missing_field += 1;
+            if state.page == Pages::ManualMappingP2 && state.selected_missing_field <= state.amount_missing_fields {
+                state.selected_missing_field += 1;
+            }
+            else if state.page == Pages::UnusedDataP3 && state.selected_optional_field <= state.amount_optional_fields {
+                state.selected_optional_field += 1;
+            }
         }
     }
     // Scroll within tabs of the view popup
@@ -305,9 +309,13 @@ pub fn handle_scroll_up(state: &mut AppState, mouse_event: MouseEvent) {
         {
             state.selected_input_field -= 1;
         } else if is_mouse_over_area(state.output_fields_area_p2_p3, mouse_event.column, mouse_event.row)
-            && state.selected_missing_field > 1
         {
-            state.selected_missing_field -= 1;
+            if state.page == Pages::ManualMappingP2 && state.selected_missing_field > 1 {
+                state.selected_missing_field -= 1;
+            }
+            else if state.page == Pages::UnusedDataP3 && state.selected_optional_field > 1 {
+                state.selected_optional_field -= 1;
+            }
         }
     }
     // Scroll within tabs of the view popup
@@ -380,6 +388,10 @@ pub fn next_page(state: &mut AppState) {
     state.selected_optional_field = 1;
 
     state.page.next();
+
+    if state.page == Pages::UnusedDataP3 {
+        preload_p3(state); // todo: is this the cleanest way? before if closures have been used to handle page specific issues.
+    }
 }
 
 pub fn create_output_files(state: &mut AppState) {
