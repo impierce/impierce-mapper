@@ -3,7 +3,7 @@ use serde_json::Value;
 use std::fs::File;
 use jsonschema::JSONSchema;
 
-pub fn _validate() {
+pub fn _validate_json_instance() {
     let schema_file = File::open("json/ebsi-elm/vcdm2.0-europass-edc-schema/schema.json").unwrap();
     let schema: Value = serde_json::from_reader(schema_file).unwrap();
     // Validate the schema
