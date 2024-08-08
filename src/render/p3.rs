@@ -6,12 +6,146 @@ use ratatui::{
 };
 
 use crate::{
-    mapping_bars::{render_manytoone_bar, render_mapping_bar},
-    popups::{render_popup_exit_warning, render_popup_mapping},
-    state::{translate, AppState, MappingOptions, P2P3Tabs},
+    backend::jsonpointer::JsonPath, mapping_bars::{render_manytoone_bar, render_mapping_bar}, popups::{render_popup_exit_warning, render_popup_mapping}, state::{translate, AppState, MappingOptions, P2P3Tabs, Pages}, trace_dbg
 };
 
+use serde_json::{Map, Value};
+
+// Function to recursively resolve $refs in the schema
+fn resolve_ref(schema: &Value, defs: &Value, ref_path: &str) -> Option<Value> {
+    let ref_path = ref_path.trim_start_matches("#/$defs/");
+    defs.get(ref_path).cloned()
+}
+
+// Function to analyze schema and extract possible root-level keys
+fn extract_root_keys(schema: &Value, defs: &Value, keys: &mut Map<String, Value>) {
+
+    if let Some(properties) = schema.get("properties") {
+        if let Some(properties_map) = properties.as_object() {
+            for key in properties_map.keys() {
+                keys.insert(key.clone(), properties_map[key].clone());
+            }
+        }
+    }
+
+    if let Some(one_of) = schema.get("oneOf") {
+        if let Some(one_of_array) = one_of.as_array() {
+            for sub_schema in one_of_array {
+                extract_root_keys(sub_schema, defs, keys);
+            }
+        }
+    }
+
+    if let Some(any_of) = schema.get("anyOf") {
+        if let Some(any_of_array) = any_of.as_array() {
+            for sub_schema in any_of_array {
+                extract_root_keys(sub_schema, defs, keys);
+            }
+        }
+    }
+
+    if let Some(all_of) = schema.get("allOf") {
+        if let Some(all_of_array) = all_of.as_array() {
+            for sub_schema in all_of_array {
+                extract_root_keys(sub_schema, defs, keys);
+            }
+        }
+    }
+
+    if let Some(ref_value) = schema.get("$ref") {
+        if let Some(ref_str) = ref_value.as_str() {
+            if let Some(resolved_schema) = resolve_ref(schema, defs, ref_str) {
+                extract_root_keys(&resolved_schema, defs, keys);
+            }
+        }
+    }
+}
+
+// Main function to load schema and extract root-level keys
+fn get_root_keys_from_schema(state: &mut AppState) {
+
+
+    // Extract $defs from the schema
+    let defs = state.schema.get("$defs").unwrap_or(&Value::Null);
+
+    // Set to store unique root-level keys
+    let mut keys = Map::new();
+
+    // Extract root-level keys
+    extract_root_keys(&state.schema, defs, &mut keys);
+    // trace_dbg!(&keys);
+    state.section_map = keys;
+}
+
+pub fn get_section_output_fields(state: &mut AppState) {
+    let mut sections = Vec::new();
+
+
+    if state.page == Pages::ManualMappingP2 && state.missing_data_fields.len() > 30 {
+        for path in &state.missing_data_fields {
+            // Remove the leading '/' and split the path
+            if let Some(stripped_path) = path.0.strip_prefix('/') {
+                if let Some(first_section) = stripped_path.split('/').next() {
+                    let first_section_str = first_section.to_string();
+                    if !sections.contains(&first_section_str) {
+                        sections.push(first_section_str);
+                    }
+                }
+            }
+        }
+
+        state.section_missing_fields = sections.into_iter().map(|section| (section, "".to_string())).collect();
+    }
+
+    else if state.page == Pages::UnusedDataP3 && state.optional_fields.len() > 30 {
+
+        get_root_keys_from_schema(state);
+        let value: Value = state.section_map.clone().into();
+        // let path = serde_json_path::JsonPath::parse(&state.selected_optional_path);
+        let path = serde_json_path::JsonPath::parse("$.credentialSubject");
+        // trace_dbg!(&path);
+        // trace_dbg!(&value);
+        match path {
+            Ok(path) => {
+                state.section_optional_fields = vec![value.pointer("/credentialSubject").unwrap().clone()];
+                // state.section_optional_fields = path.query(&value).all().into_iter().cloned().collect();
+                // state.section_optional_fields = path.query(&state.section_map.into()).all().into_iter().cloned().collect();
+                
+                trace_dbg!(value.pointer("/credentialSubject").unwrap().clone());
+                trace_dbg!(&state.section_optional_fields);
+                trace_dbg!("hiero");
+            }
+            Err(_) => {}
+        }
+        
+        // for path in &state.optional_fields {
+        //     // Remove the leading '/' and split the path
+        //     if let Some(stripped_path) = path.0.strip_prefix('/') {
+        //         if let Some(first_section) = stripped_path.split('/').next() {
+        //             let first_section_str = first_section.to_string();
+        //             if !sections.contains(&first_section_str) {
+        //                 sections.push(first_section_str);
+        //             }
+        //         }
+        //     }
+        // }
+        // state.section_optional_fields = sections.into_iter().map(|section| (section, "".to_string())).collect();
+    }
+}
+
 pub fn render_lost_data_p3(area: Rect, buf: &mut Buffer, state: &mut AppState) {
+    // Testing
+    
+    let path = serde_json_path::JsonPath::parse("$['$defs'].AchievementSubject").unwrap();
+    let node = path.query(&state.schema).all();
+
+    // trace_dbg!(&state.selected_optional_path);
+    // trace_dbg!(&node);
+
+    get_section_output_fields(state);
+    // End testing
+
+
     Block::new()
         .title(format!("  {}  ", translate("unused_data")))
         .title_alignment(Alignment::Center)
@@ -90,14 +224,17 @@ pub fn render_lost_data_p3(area: Rect, buf: &mut Buffer, state: &mut AppState) {
     );
 
     // Render right tab containing optional fields
-    state.amount_optional_fields = state.optional_fields.len() - 2; // todo
+    // state.amount_optional_fields = state.optional_fields.len() - 2; // todo
+
+    state.amount_optional_fields = state.section_map.len() + 1;
+    state.section_map = state.section_optional_fields[0].as_object().unwrap().clone();
     let mut table_state = TableState::default().with_selected(Some(state.selected_optional_field));
     let rows: Vec<Row> = state
-        .optional_fields
+        .section_map
         .iter()
         .enumerate()
         .map(|(index, (key, value))| {
-            let mut row = Row::new(vec![key.as_str(), value.as_str()]);
+            let mut row = Row::new(vec![key.clone(), value.to_string().to_owned()]);
             if state.completed_optional_fields.iter().any(|&(first, _)| first == index) {
                 row = row.style(Style::default().fg(Color::Green));
             }

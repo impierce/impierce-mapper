@@ -1,4 +1,5 @@
 use ratatui::layout::Rect;
+use serde_json::{Map, Value};
 use std::borrow::Cow;
 use strum::{AsRefStr, Display, FromRepr};
 
@@ -42,23 +43,40 @@ pub struct AppState {
 
     // Fields extracted from the input json file.
     pub input_fields: Vec<(String, String)>,
+    // pub selected_input_fields: Vec<String>, // todo: string or usize? For ManyToOne, currently not in use
+    
     pub amount_input_fields: usize,
     pub selected_input_field: usize,
-    pub selected_input_fields: Vec<String>, //string or usize? For ManyToOne, currently not in use
-
+    
     // Mandatory fields extracted from the output json format
     pub missing_data_fields: Vec<(String, String)>,
+    pub completed_missing_fields: Vec<(usize, usize)>, // (missing_field_index, input_field_index)
+    // pub selected_missing_fields: Vec<String>, // todo: string or usize? For ManyToOne, currently not in use
+    
     pub amount_missing_fields: usize,
     pub selected_missing_field: usize,
-    pub selected_missing_fields: Vec<String>, //string or usize? For ManyToOne, currently not in use
-    pub completed_missing_fields: Vec<(usize, usize)>, // (missing_field_index, input_field_index)
-
+    
     // Optional fields extracted from the output json format
     pub optional_fields: Vec<(String, String)>,
-    pub amount_optional_fields: usize,
-    pub selected_optional_field: usize,
-    pub selected_optional_fields: Vec<String>, //string or usize? For ManyToOne, currently not in use
     pub completed_optional_fields: Vec<(usize, usize)>, // (optional_field_index, input_field_index)
+    //pub selected_optional_fields: Vec<String>, // todo: string or usize? For ManyToOne, currently not in use
+    
+    pub selected_optional_field: usize,
+    pub amount_optional_fields: usize,
+    
+    // testing 
+    pub schema: Value,
+    pub section_optional_fields: Vec<Value>, // test
+    pub section_map: Map<String, Value>,
+
+    pub selected_input_path: String,
+    pub selected_missing_path: String,
+    pub selected_optional_path: String,
+    
+    pub section_input_fields: Vec<(String, String)>, 
+    pub section_missing_fields: Vec<(String, String)>,
+    
+    // end testing
 
     // Backend
     pub candidate_data_value: Option<String>,

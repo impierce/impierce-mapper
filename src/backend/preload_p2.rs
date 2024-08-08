@@ -81,6 +81,13 @@ pub fn preload_p2(state: &mut AppState) {
     ]
     .concat();
 
+    // Load the Json Schema 
+    let schema_file = std::fs::File::open("json/obv3/obv3_schema.json").unwrap();
+    state.schema = serde_json::from_reader(schema_file).unwrap();
+    let schema = jsonschema::JSONSchema::options().with_draft(jsonschema::Draft::Draft7).compile(&state.schema).unwrap();
+    
+    trace_dbg!(schema);
+
     //selector(state);
 }
 

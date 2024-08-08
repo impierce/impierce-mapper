@@ -1,4 +1,3 @@
-
 use serde_json::Value;
 use std::collections::HashMap;
 
@@ -13,14 +12,12 @@ fn extract_paths(
     if let Some(properties) = schema.get("properties") {
         if let Value::Object(map) = properties {
             for (key, value) in map {
-                if current_path.contains(key) {
-                    let new_path = format!("{}/{}", base_path, key);
-                    paths.push(new_path.clone());
-                    continue; // Skip if key is already in the current path
-                }
-                current_path.push(key.clone());
                 let new_path = format!("{}/{}", base_path, key);
                 paths.push(new_path.clone());
+                if current_path.contains(key) {
+                    continue; // Skip if key is already in the current path to prevent infinite looping.
+                }
+                current_path.push(key.clone());
                 extract_paths(value, &new_path, paths, defs, current_path);
                 current_path.pop();
             }
